@@ -1,7 +1,5 @@
-const btn = document.getElementById("submitBtn");
-const msg = document.getElementById("message");
-
-btn.addEventListener("click", () => {
-  msg.textContent = "単位ください";
-  btn.disabled = true;
-});
+<script>
+  document.getElementById("unitBtn").addEventListener("click", function () {
+    document.getElementById("message").textContent = "単位ください";
+  });
+</script>

@@ -1,7 +1,30 @@
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* 増殖用コンテナ */
+#container {
+  margin-top: 30px;
+}
+
+/* 出る文字の基本 */
+.unit {
+  font-size: 42px;
+  font-weight: bold;
+  color: red;
+  animation: pop 0.4s ease, shake 0.3s ease-in-out 2;
+  margin: 10px 0;
+}
+
+/* 画面埋め尽くし時の body 用 */
 body.flood {
   overflow: hidden;
 }
 
+/* 画面埋め尽くし文字 */
 .flood-text {
   position: fixed;
   font-size: 32px;
@@ -9,4 +32,25 @@ body.flood {
   color: red;
   animation: pop 0.4s ease;
   pointer-events: none;
+}
+
+/* ポップアップアニメーション */
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* 震えるアニメーション */
+@keyframes shake {
+  0% { transform: translateX(0) scale(1.2); }
+  25% { transform: translateX(-5px) scale(1.2); }
+  50% { transform: translateX(5px) scale(1.2); }
+  75% { transform: translateX(-5px) scale(1.2); }
+  100% { transform: translateX(0) scale(1.2); }
 }

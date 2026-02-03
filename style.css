@@ -1,17 +1,24 @@
-#message {
-  margin-top: 20px;
-  font-size: 48px;
-  font-weight: bold;
-  color: red;
-  opacity: 0;
-  transform: scale(0);
-  transition: all 0.4s ease;
+#container {
+  margin-top: 30px;
 }
 
-#message.show {
-  opacity: 1;
-  transform: scale(1.2);
-  animation: shake 0.3s ease-in-out 2, rainbow 1s infinite;
+.unit {
+  font-size: 42px;
+  font-weight: bold;
+  color: red;
+  animation: pop 0.4s ease, shake 0.3s ease-in-out 2;
+  margin: 10px 0;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
 }
 
 @keyframes shake {
@@ -20,12 +27,4 @@
   50% { transform: translateX(5px) scale(1.2); }
   75% { transform: translateX(-5px) scale(1.2); }
   100% { transform: translateX(0) scale(1.2); }
-}
-
-@keyframes rainbow {
-  0% { color: red; }
-  25% { color: orange; }
-  50% { color: yellow; }
-  75% { color: green; }
-  100% { color: blue; }
 }

@@ -1,0 +1,31 @@
+#message {
+  margin-top: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  color: red;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+#message.show {
+  opacity: 1;
+  transform: scale(1.2);
+  animation: shake 0.3s ease-in-out 2, rainbow 1s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0) scale(1.2); }
+  25% { transform: translateX(-5px) scale(1.2); }
+  50% { transform: translateX(5px) scale(1.2); }
+  75% { transform: translateX(-5px) scale(1.2); }
+  100% { transform: translateX(0) scale(1.2); }
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  25% { color: orange; }
+  50% { color: yellow; }
+  75% { color: green; }
+  100% { color: blue; }
+}

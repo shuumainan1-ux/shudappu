@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>課題提出</title>
+</head>
+<body>
 
+  <h1>課題提出</h1>
+
+  <button id="submitBtn">提出</button>
+  <p id="message"></p>
+
+  <!-- 外部JS読み込み -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+// ボタンと表示先の要素を取得
+const btn = document.getElementById("submitBtn");
+const msg = document.getElementById("message");
+
+// ボタン押下イベント
+btn.addEventListener("click", () => {
+  // メッセージ表示
+  msg.textContent = "おめでとうございます。";
+  // ボタン無効化（重複押下防止）
+  btn.disabled = true;
+});

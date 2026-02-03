@@ -1,5 +1,10 @@
-<script>
-  document.getElementById("unitBtn").addEventListener("click", function () {
-    document.getElementById("message").textContent = "単位ください";
-  });
-</script>
+const btn = document.getElementById("unitBtn");
+const container = document.getElementById("container");
+
+btn.addEventListener("click", () => {
+  const msg = document.createElement("div");
+  msg.textContent = "単位ください";
+  msg.className = "unit";
+
+  container.appendChild(msg);
+});

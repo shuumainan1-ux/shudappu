@@ -16,14 +16,12 @@
 </body>
 </html>
 
-// ボタンと表示先の要素を取得
+// ボタンとメッセージ要素を取得
 const btn = document.getElementById("submitBtn");
 const msg = document.getElementById("message");
 
-// ボタン押下イベント
+// クリックイベント
 btn.addEventListener("click", () => {
-  // メッセージ表示
-  msg.textContent = "おめでとうございます。";
-  // ボタン無効化（重複押下防止）
-  btn.disabled = true;
+  msg.textContent = "おめでとうございます"; // メッセージ表示
+  btn.disabled = true; // 重複クリック防止
 });
